@@ -120,7 +120,7 @@ header nav.menu-desktop ul li {
 }
 
 .menu-mobile nav ul li a {
-    color: #ffff;
+    color: #131212;
     font-size: 20px;
     font-weight: 300;
     padding: 20px 8%;
@@ -128,7 +128,7 @@ header nav.menu-desktop ul li {
 }
 
 .menu-mobile nav ul li a:hover {
-    background-color: #FFF;
+    background-color: #d29b9b;
     color: #000;
 }
 
