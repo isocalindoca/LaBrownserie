@@ -194,7 +194,7 @@ section.especialidades {
 
 section.especialidades .flex {
     display: flex;
-    gap: 60px;
+    gap: 30px;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -210,6 +210,24 @@ section.especialidades .flex {
     background-repeat: no-repeat;
     position: relative;
     overflow: hidden;
+    flex: 1 1 calc(33.333% - 30px); /* Ocupa 3 colunas em telas maiores */
+    max-width: calc(33.333% - 30px); /* Evita que as caixas ultrapassem o limite */
+    box-sizing: border-box;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 1024px) {
+    .especialidades .especialidades-box {
+        flex: 1 1 calc(50% - 30px); /* Ocupa 2 colunas em tablets */
+        max-width: calc(50% - 30px);
+    }
+}
+
+@media (max-width: 768px) {
+    .especialidades .especialidades-box {
+        flex: 1 1 100%; /* Ocupa 1 coluna em telas pequenas */
+        max-width: 100%;
+    }
 }
 
 /* Efeito de escurecimento na imagem de fundo para melhor contraste com o texto */
@@ -237,6 +255,7 @@ section.especialidades .flex {
 
 .especialidades .especialidades-box i {
     font-size: 70px;
+    max-width: 300px;
     color: #00ff08;
 }
 
@@ -250,8 +269,8 @@ section.especialidades .flex {
     background-image: url('images/brownie-classico.jpg');
 }
 
-.especialidades .especialidade-brownie-nuts {
-    background-image: url('images/brownie-nuts.jpg');
+.especialidades .especialidade-brownie-chantilly {
+    background-image: url('images/brownie-com-chantilly.jpg');
 }
 
 .especialidades .especialidade-brownie-doce-leite {
